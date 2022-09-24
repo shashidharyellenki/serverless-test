@@ -1,0 +1,19 @@
+
+
+service: serverless
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+
+
+functions:
+  getData:
+    handler: handler.getData
+    events:
+        - http:
+            path: /
+            method: get
